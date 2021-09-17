@@ -305,11 +305,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -5568037498563976881, guid: e58dd79dce1766441b9614b3a93cc375, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415461136564780912, guid: e58dd79dce1766441b9614b3a93cc375, type: 3}
+    - target: {fileID: -3758482061430435830, guid: e58dd79dce1766441b9614b3a93cc375, type: 3}
       propertyPath: leftAndRightEdge
       value: 20
       objectReference: {fileID: 0}
@@ -360,10 +356,6 @@ PrefabInstance:
     - target: {fileID: 3746148463623366982, guid: e58dd79dce1766441b9614b3a93cc375, type: 3}
       propertyPath: m_Name
       value: AppleTree
-      objectReference: {fileID: 0}
-    - target: {fileID: 9186755322337844590, guid: e58dd79dce1766441b9614b3a93cc375, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e58dd79dce1766441b9614b3a93cc375, type: 3}
