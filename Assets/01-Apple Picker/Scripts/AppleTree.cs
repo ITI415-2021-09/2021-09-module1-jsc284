@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour
 { 
+    [Header("Set in Inspector")]
     // Prefab for instantiating apples
     public GameObject applePrefab;
 
@@ -48,7 +49,7 @@ public class AppleTree : MonoBehaviour
         } else if (pos.x > leftAndRightEdge)
         {
             speed = -Mathf.Abs(speed); // Move left
-        } 
+        }
     }
 
     void FixedUpdate ()
