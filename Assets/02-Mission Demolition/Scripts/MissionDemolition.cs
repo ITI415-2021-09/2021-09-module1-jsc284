@@ -102,9 +102,9 @@ public class MissionDemolition : MonoBehaviour
         }
         StartLevel();
     }
-    public void SwitchView(string eView = " ")
+    public void SwitchView(string eView = "")
     {
-        if (eView == " ")
+        if (eView == "")
         {
             eView = uitButton.text;
         }
