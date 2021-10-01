@@ -18,11 +18,6 @@ public class LoadNewScene : MonoBehaviour
 
     public void LoadScene3()
     {
-        SceneManager.LoadScene("Minigame");
-    }
-
-    public void LoadScene4()
-    {
         SceneManager.LoadScene("Main-Prototype1");
     }
 
