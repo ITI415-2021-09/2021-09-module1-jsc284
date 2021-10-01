@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Apple
   - Projectile
+  - Bonus
+  - PickUp
+  - Danger
   layers:
   - Default
   - TransparentFX

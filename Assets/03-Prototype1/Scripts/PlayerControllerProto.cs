@@ -8,6 +8,7 @@ public class PlayerControllerProto : MonoBehaviour
     public float speed = 0;
 
     private Rigidbody rb;
+    private int count;
     private float movementX;
     private float movementY;
 
@@ -15,6 +16,7 @@ public class PlayerControllerProto : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        count = 0;
     }
 
     void OnMove(InputValue movementValue)
@@ -28,5 +30,13 @@ public class PlayerControllerProto : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(movement * speed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Danger"))
+        {
+            count = count + 1;
+        }
     }
 }
