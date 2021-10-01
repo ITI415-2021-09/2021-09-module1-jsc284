@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8433832462945173177}
   - component: {fileID: 8433832462945173176}
   - component: {fileID: 6086620050534373808}
+  - component: {fileID: 8616052743114071625}
   m_Layer: 0
   m_Name: Danger
   m_TagString: Danger
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8433832462945173175}
   m_LocalRotation: {x: 0.008802043, y: 0.008649743, z: 0.008649744, w: 0.99988645}
   m_LocalPosition: {x: -10, y: -9, z: 30}
-  m_LocalScale: {x: 12, y: 3, z: 3}
+  m_LocalScale: {x: 9, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -112,3 +113,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8616052743114071625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8433832462945173175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c87f89c051f4047b427d7006889cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

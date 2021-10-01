@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro; 
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerControllerProto : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class PlayerControllerProto : MonoBehaviour
 
         SetCountText();
         winTextObject.SetActive(false);
+
     }
 
     void OnMove(InputValue movementValue)
@@ -45,6 +47,7 @@ public class PlayerControllerProto : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(movement * speed);
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -55,6 +58,12 @@ public class PlayerControllerProto : MonoBehaviour
             count = count + 1;
 
             SetCountText();
+        }
+
+        // If there are more than 3 blunders, restart the game.
+        if (count == 3)
+        {
+            SceneManager.LoadScene("Main-Prototype 1");
         }
     }
 }
