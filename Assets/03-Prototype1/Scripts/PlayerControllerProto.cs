@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro; 
 
 public class PlayerControllerProto : MonoBehaviour
 {
     public float speed = 0;
+    public TextMeshProUGUI countText;
+    public GameObject winTextObject;
 
     private Rigidbody rb;
     private int count;
@@ -17,6 +20,9 @@ public class PlayerControllerProto : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
+
+        SetCountText();
+        winTextObject.SetActive(false);
     }
 
     void OnMove(InputValue movementValue)
@@ -24,6 +30,15 @@ public class PlayerControllerProto : MonoBehaviour
         Vector2 movementVector = movementValue.Get<Vector2>();
         movementX = movementVector.x;
         movementY = movementVector.y;
+    }
+
+    void SetCountText()
+    {
+        countText.text = "Blunders: " + count.ToString();
+        if(count >= 3)
+        {
+            winTextObject.SetActive(true);
+        }
     }
 
     void FixedUpdate()
@@ -36,7 +51,10 @@ public class PlayerControllerProto : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Danger"))
         {
+            other.gameObject.SetActive(false);
             count = count + 1;
+
+            SetCountText();
         }
     }
 }
