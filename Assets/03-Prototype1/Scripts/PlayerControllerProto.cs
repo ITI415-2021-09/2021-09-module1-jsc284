@@ -68,7 +68,7 @@ public class PlayerControllerProto : MonoBehaviour
             SetCountText();
         }
 
-        // If there are more than 3 blunders, restart the game.
+        // If there are -1 lives, restart the game.
         if (count == -1)
         {
             SceneManager.LoadScene("Main-Prototype 1");
