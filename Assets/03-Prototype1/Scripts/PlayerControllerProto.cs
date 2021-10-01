@@ -36,8 +36,8 @@ public class PlayerControllerProto : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Blunders: " + count.ToString();
-        if(count >= 3)
+        countText.text = "Score: " + count.ToString();
+        if(count <= -3)
         {
             winTextObject.SetActive(true);
         }
@@ -55,13 +55,21 @@ public class PlayerControllerProto : MonoBehaviour
         if (other.gameObject.CompareTag("Danger"))
         {
             other.gameObject.SetActive(false);
+            count = count - 1;
+
+            SetCountText();
+        }
+
+        if (other.gameObject.CompareTag("Heal"))
+        {
+            other.gameObject.SetActive(false);
             count = count + 1;
 
             SetCountText();
         }
 
         // If there are more than 3 blunders, restart the game.
-        if (count == 3)
+        if (count == -3)
         {
             SceneManager.LoadScene("Main-Prototype 1");
         }

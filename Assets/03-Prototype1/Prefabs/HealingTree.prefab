@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3746148463623366983}
   - component: {fileID: -3758482061430435830}
   m_Layer: 8
-  m_Name: AppleTree
+  m_Name: HealingTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7b81e136628dd479cb4fb9eb3aa1b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applePrefab: {fileID: 8433832462945173175, guid: 979625bbfffde5444a53053ba3549d25, type: 3}
+  applePrefab: {fileID: 5877130471681060791, guid: 399bc516ea447c1419ef076c5d71db36, type: 3}
   speed: 10
   leftAndRightEdge: 20
   chanceToChangeDirections: 0.08
