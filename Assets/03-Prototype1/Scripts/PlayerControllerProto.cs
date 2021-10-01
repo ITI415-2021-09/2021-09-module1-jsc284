@@ -20,7 +20,7 @@ public class PlayerControllerProto : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        count = 0;
+        count = 2;
 
         SetCountText();
         winTextObject.SetActive(false);
@@ -36,8 +36,8 @@ public class PlayerControllerProto : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Score: " + count.ToString();
-        if(count <= -3)
+        countText.text = "Lives: " + count.ToString();
+        if(count <= -1)
         {
             winTextObject.SetActive(true);
         }
@@ -69,7 +69,7 @@ public class PlayerControllerProto : MonoBehaviour
         }
 
         // If there are more than 3 blunders, restart the game.
-        if (count == -3)
+        if (count == -1)
         {
             SceneManager.LoadScene("Main-Prototype 1");
         }
