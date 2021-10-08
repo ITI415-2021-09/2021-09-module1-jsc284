@@ -38,7 +38,7 @@ public class PlayerControllerProto : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Lives: " + count.ToString();
-        if(count <= -1)
+        if(count <= 0)
         {
             winTextObject.SetActive(true);
         }
@@ -83,8 +83,8 @@ public class PlayerControllerProto : MonoBehaviour
             SetCountText();
         }
 
-        // If there are -1 lives left, restart the game.
-        if (count == -1)
+        // If there are 0 lives left, restart the game.
+        if (count == 0)
         {
             SceneManager.LoadScene("Main-Prototype 1");
         }
