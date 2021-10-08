@@ -10,6 +10,7 @@ public class PlayerControllerProto : MonoBehaviour
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public bool projectileIsOnTheGround = true;
 
     private Rigidbody rb;
     private int count;
@@ -20,7 +21,7 @@ public class PlayerControllerProto : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        count = 2;
+        count = 5;
 
         SetCountText();
         winTextObject.SetActive(false);
@@ -48,6 +49,20 @@ public class PlayerControllerProto : MonoBehaviour
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(movement * speed);
 
+        if(Input.GetButtonDown("Jump") && projectileIsOnTheGround)
+        {
+            rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+            projectileIsOnTheGround = false;
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            projectileIsOnTheGround = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -68,7 +83,7 @@ public class PlayerControllerProto : MonoBehaviour
             SetCountText();
         }
 
-        // If there are -1 lives, restart the game.
+        // If there are -1 lives left, restart the game.
         if (count == -1)
         {
             SceneManager.LoadScene("Main-Prototype 1");

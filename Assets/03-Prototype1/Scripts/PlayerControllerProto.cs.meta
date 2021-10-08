@@ -3,7 +3,10 @@ guid: 31706d1eb0a427c45856ed175f6ff358
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - countText: {instanceID: 0}
+  - winTextObject: {fileID: 3369533226380971504, guid: fb46618e9ab7a0d4a86f22bc851a1053, type: 3}
+  - finishTextObject: {fileID: 4396141370325966091, guid: 06405474a30221745b187e9900158324, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

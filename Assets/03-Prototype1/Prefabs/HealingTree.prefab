@@ -66,7 +66,7 @@ MonoBehaviour:
   speed: 10
   leftAndRightEdge: 20
   chanceToChangeDirections: 0.08
-  secondsBetweenAppleDrops: 0.5
+  secondsBetweenAppleDrops: 1
 --- !u!1 &3746148464944763448
 GameObject:
   m_ObjectHideFlags: 0

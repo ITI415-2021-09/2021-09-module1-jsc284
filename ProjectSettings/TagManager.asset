@@ -10,6 +10,7 @@ TagManager:
   - PickUp
   - Danger
   - Heal
+  - Ground
   layers:
   - Default
   - TransparentFX
